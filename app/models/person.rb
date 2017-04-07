@@ -1,5 +1,6 @@
 class Person < ApplicationRecord
   has_many :enrollements, through: :enrollments
+
   validates :first_name, :last_name, :email, presence: true
   validates :first_name, :last_name, length: { maximum: 30 }
   validates :email, length: { maximum: 50 }
