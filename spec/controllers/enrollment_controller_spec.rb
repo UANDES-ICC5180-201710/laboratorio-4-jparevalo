@@ -2,11 +2,11 @@ require 'rails_helper'
 
 describe Enrollment, '.create', :type => "request=" do
 
-  let(:new_course) {Course.new :title => "New", :quota => 1, :code => "N"}
-  let(:new_student_1) {Person.new :is_teacher => false}
-  let(:new_student_2) {Person.new :is_teacher => false}
-  let(:enrollment1) {Enrollment.new :student => new_student_1, :course => new_course}
-  let(:enrollment2) {Enrollment.new :student => new_student_2, :course => new_course}
+  let(:new_course) {build(:course)}
+  let(:new_student_1) {build(:person)}
+  let(:new_student_2) {build(:person)}
+  let(:enrollment1) {build(:enrollment)}
+  let(:enrollment2) {build(:enrollment)}
   it 'creates a new enrollment' do
       new_course.enrollments.append(enrollment1)
       new_course.enrollments.append(enrollment2)
