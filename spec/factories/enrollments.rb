@@ -1,6 +1,6 @@
 FactoryGirl.define do
    factory :enrollment do
-     student 1
-     course 1
+     student factory: :student, strategy: :build
+     course factory: :course, strategy: :build
    end
 end

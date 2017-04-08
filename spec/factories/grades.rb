@@ -1,7 +1,7 @@
 FactoryGirl.define do
    factory :grade do
-     person 1
-     assignment 1
+     person factory: :student, strategy: :build
+     assignment factory: :assignment, strategy: :build
      value 3
    end
 end
